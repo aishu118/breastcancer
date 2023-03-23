@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breast-Cancer Prediction</title>
+    <style>
+        body{
+            background-image: url("{{url_for('static', filename='october.jpg')}}");
+           background-size: cover;
+           background-repeat: no-repeat;
+           
+           background-position: center;
+           }
+        .container{
+            width: 800px;
+            margin: auto;
+            padding: 10px;
+            
+            display: flex;
+            justify-content: space-between;
+        }
+        button{
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 20px;
+            background-color:#e4e4e4;
+           
+        }
+        #container{
+            text-align: center;
+        }
+        #lb{
+            color: rgb(170, 5, 96);
+        }
+    </style>
+</head>
+<body>
+    
+                                  
+    <h1 style="text-align: center;font-style: oblique;color: rgb(249, 9, 217);">Breast-Cancer Prediction</h1>
+    <form method="POST" action="/predict">
+        <div class="container">
+            <div>
+                <label id="lb">radius_mean</label><br>
+                <input type="text" name="radius_mean">
+            </div>
+            <div>
+                <label id="lb">texture_mean</label><br>
+                <input type="text" name="texture_mean">
+            </div>
+            <div>
+                <label id="lb">perimeter_mean</label><br>
+                <input type="text" name="perimeter_mean">
+            </div>
+            <div>
+                <label id="lb">area_mean</label><br>
+                <input type="text" name="area_mean">
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <label id="lb">smoothness_mean</label><br>
+                <input type="text" name="smoothness_mean">
+            </div>
+            <div>
+                <label id="lb">compactness_mean</label><br>
+                <input type="text" name="compactness_mean">
+            </div>
+            <div>
+                <label id="lb">concavity_mean</label><br>
+                <input type="text" name="concavity_mean">
+            </div>
+            <div>
+                <label id="lb">concave_points_mean</label><br>
+                <input type="text" name="concave_points_mean">
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <label id="lb">symmetry_mean</label><br>
+                <input type="text" name="symmetry_mean">
+            </div>
+            <div>
+                <label id="lb">fractal_dimension_mean</label><br>
+                <input type="text" name="fractal_dimension_mean">
+            </div>
+            <div>
+                <label id="lb">radius_se</label><br>
+                <input type="text" name="radius_se">
+            </div>
+            <div>
+                <label id="lb">texture_se</label><br>
+                <input type="text" name="texture_se">
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <label id="lb">perimeter_se</label><br>
+                <input type="text" name="perimeter_se">
+            </div>
+            <div>
+                <label id="lb">area_se</label><br>
+                <input type="text" name="area_se">
+            </div>
+            <div>
+                <label id="lb">smoothness_se</label><br>
+                <input type="text" name="smoothness_se">
+            </div>
+            <div>
+                <label id="lb">compactness_se</label><br>
+                <input type="text" name="compactness_se">
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <label id="lb">concavity_se</label><br>
+                <input type="text" name="concavity_se">
+            </div>
+            <div>
+                <label id="lb">concave_points_se</label><br>
+                <input type="text" name="concave_points_se">
+            </div>
+            <div>
+                <label id="lb">symmetry_se</label><br>
+                <input type="text" name="symmetry_se">
+            </div>
+            <div>
+                <label id="lb">fractal_dimension_se</label><br>
+                <input type="text" name="fractal_dimension_se">
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <label id="lb">radius_worst</label><br>
+                <input type="text" name="radius_worst">
+            </div>
+            <div> 
+                <label id="lb">texture_worst</label><br>
+                <input type="text" name="texture_worst">
+            </div>
+            <div>
+                <label id="lb">perimeter_worst</label><br>
+                <input type="text" name="perimeter_worst">
+            </div>
+            <div>
+                <label id="lb">area_worst</label><br>
+                <input type="text" name="area_worst">
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <label id="lb">smoothness_worst</label><br>
+                <input type="text" name="smoothness_worst">
+            </div>
+            <div>
+                <label id="lb">compactness_worst</label><br>
+                <input type="text" name="compactness_worst">
+            </div>
+            <div>
+                <label id="lb">concavity_worst</label><br>
+                <input type="text" name="concavity_worst">
+            </div>
+            <div>
+                <label id="lb">concave_points_worst</label><br>
+                <input type="text" name="concave_points_worst">
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <label id="lb">symmetry_worst</label><br>
+                <input type="text" name="symmetry_worst">
+            </div>
+            <div>
+                <label id="lb">fractal_dimension_worst</label><br>
+                <input type="text" name="fractal_dimension_worst">
+            </div>
+
+        </div>
+        <div id="container">
+            <button type="submit" formaction="/predict" style="text-align: center">Predict 
+            </button><br><br>
+        </div>
+    </form>
+
+</body>
+</html>
